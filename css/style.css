@@ -35,7 +35,7 @@
 	display: inline-block;
 	/*box-sizing: border-box;*/
 	width: 49px;
-	height: 48px;
+	height: 49px;
 	border: 1px solid black;
 }
 
@@ -52,10 +52,21 @@
 
 .first-line .cell:nth-child(odd) {
 	background-color: black;
+	position: relative;
 }
 
 .second-line .cell:nth-child(even) {
 	background-color: black;
+}
+
+.first-line .cell:nth-child(odd):before {
+	content: '';
+	width: 45px;
+	height: 45px;
+	border: 2px solid orange;
+	border-radius: 50%;
+	position: absolute;
+	background-color: #f0e68c;
 }
 
 
@@ -66,4 +77,3 @@ ul.first-line li:nth-child(even) {
 	background-color: #fff8dc;
 }
  
-ul.second-line 
